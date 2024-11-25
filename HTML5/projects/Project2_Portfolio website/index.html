@@ -1,12 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shasika Shehan - Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <title>akshay ijalkar - Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            background: #f9f9f9;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header */
+        header {
+            background: #333333;
+            color: #fff;
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(19, 18, 18, 0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover,
+        header nav ul li a.active {
+            color: #ffffff;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #f0a500, hsl(60, 8%, 97%));
+            color: #111111;
+        }
+
+        .hero img {
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .highlight {
+            color: #0f0f0f;
+            background: #f0a500;
+            padding: 0.2rem 0.5rem;
+            border-radius: 5px;
+        }
+
+        .hero .cta-buttons a {
+            display: inline-block;
+            margin: 1rem;
+            padding: 0.75rem 2rem;
+            background: #524f4f;
+            color: #fff;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .hero .cta-buttons a.secondary {
+            background: #f0a500;
+            color: #333;
+        }
+
+        .hero .cta-buttons a:hover {
+            background: #555;
+        }
+
+        /* About Section */
+        .about {
+            padding: 4rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+            background: linear-gradient(135deg, #f0a500, hsl(60, 8%, 97%));
+        }
+
+        .about img {
+            width: 200px;
+            border-radius: 10px;
+            flex: 1 1 30%;
+        }
+
+        .about-text {
+            flex: 1 1 60%;
+        }
+
+        .about h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .about ul {
+            list-style: none;
+            padding: 0;
+            line-height: 1.8;
+        }
+
+        .about ul li strong {
+            color: #0a0a09;
+            
+        }
+
+        /* Projects Section */
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+            background: linear-gradient(135deg, #f0a500, hsl(60, 8%, 97%));
+            padding: 4rem 2rem;
+            /* border-radius: 10px; */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .projects div {
+            flex: 0 0 48%;
+            padding: 1.5rem;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #111111, #edebeb);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            position: relative;
+            transform: translateY(0);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .projects div:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .projects div::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            /* background: radial-gradient(circle at center, rgba(233, 231, 235, 0.6), transparent); */
+            opacity: 0;
+            transition: opacity 0.6s ease;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .projects div:hover::before {
+            opacity: 1;
+        }
+
+        .projects div h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+            position: relative;
+            z-index: 2;
+        }
+
+        .projects div p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+            position: relative;
+            z-index: 2;
+        }
+
+
+        /* Styling for header inside each project */
+        .projects div h3 {
+            margin-bottom: 1rem;
+        }
+
+        /* Default text alignment (centered) */
+        .projects div ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Alternate alignment */
+        .projects div:nth-child(even) {
+            align-items: flex-end;
+            /* Align odd elements to the right */
+            text-align: right;
+            /* Text is aligned to the right */
+        }
+
+        .projects div:nth-child(odd) {
+            align-items: flex-start;
+            /* Align even elements to the left */
+            text-align: left;
+            /* Text is aligned to the left */
+        }
+
+        /* Individual list items */
+        .projects div ul li {
+            margin-bottom: 0.5rem;
+        }
+        .projects div {
+            flex: 0 0 48%;
+            /* Make each project occupy 48% of the width */
+            padding: 1rem;
+            /* border: 2.5px solid #b16ee7; */
+            border-radius: 5px;
+            background: #e4bf77;
+            box-shadow: 0 2px 5px rgba(99, 82, 82, 0.1);
+            position: relative;
+            flex-direction: column;
+            /* Ensures proper alignment of inner content */ 
+        }
+
+
+        /* Skills Section */
+        .skills {
+            padding: 4rem 0;
+            text-align: center;
+            background: #4f4d49;
+            color:#fefdfd
+        }
+
+        .skills h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .skill-bars {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .skill {
+            margin-bottom: 1.5rem;
+        }
+
+        .skill span {
+            font-weight: 700;
+            color: #fefdfd;
+        }
+
+        .bar {
+            background: #f0f0f0;
+            height: 12px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 0.5rem;
+        }
+
+        .progress {
+            background: #b1e176;
+            height: 100%;
+            width: 0;
+            transition: width 0.5s ease;
+        }
+
+        .skill:hover .progress {
+            width: var(--progress);
+        }
+
+        /* Resume Section */
+        .resume {
+            padding: 2rem 0;
+            text-align: center;
+            background: #4f4d49;
+        }
+
+        .resume .btn {
+            background: #419c40;
+            color: #faf9f9;
+            padding: 0.75rem 2rem;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .resume .btn:hover {
+            background: #555;
+        }
+
+        /* Contact Section */
+        #contact {
+            padding: 4rem 0;
+            background: #f4f4f4;
+            text-align: center;
+            background: #4f4d49;
+        }
+
+        #contact .btn {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.75rem 2rem;
+            background: #f0a500;
+            color: #333;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        #contact .btn-secondary {
+            background: #333;
+            color: #fff;
+        }
+
+        #contact .btn:hover {
+            background: #e69500;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        /* Responsive Design for Mobile */
+        @media (max-width: 768px) {
+            .projects div {
+                flex: 0 0 100%;
+                /* Full width for smaller screens */
+                align-items: center;
+                /* Center align for smaller screens */
+                text-align: center;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -59,62 +435,57 @@
         </div>
     </section>
     <section id="projects" class="projects">
-        <div class="projects-container">
-            <h1>Projects</h1>
+        <div class="container">
+            <h2>Projects</h2>
             <div class="SQL">
-                <h4>SQL</h4>
-                    <ul>
-                        <li><a href="#">project1 name</a></li>
-                        <li><a href="#">project2 name</a></li>
-                    </ul>
-                </div>
-                <div class="python">
-                <h4>python3</h4>
-                    <ul>
-                        <li><a href="#">project1 name</a></li>
-                        <li><a href="#">project1 name</a></li>
-                    </ul>
-                </div>
-                </div>
-                <div class="HTML5">
-                <h4>HTML5</h4>
-                    <ul>
-                        <li><a href="#">project1 name</a></li>
-                        <li><a href="#">project1 name</a></li>
-                    </ul>
-                </div>
-                </div>
-                <div class="Machine learning">
-                <h4>Machine learning</h4>
-                    <ul>
-                        <li><a href="#">project1 name</a></li>
-                        <li><a href="#">project1 name</a></li>
-                    </ul>
-                </div>
-                </div>
-                <div class="Tableau">
-                <h4>Tableau</h4>
-                    <ul>
-                        <li><a href="#">project1 name</a></li>
-                        <li><a href="#">project1 name</a></li>
-                    </ul>
-                </div>
-                </div>
-                <div class="Java">
-                <h4>Java</h4>
-                    <ul>
-                        <li><a href="#">project1 name</a></li>
-                        <li><a href="#">project1 name</a></li>
-                    </ul>
-                </div>
-                </div>
-                <div class="Data Science">
-                <h4>Data Science</h4>
-                    <ul>
-                        <li><a href="#">project1 name</a></li>
-                        <li><a href="#">project1 name</a></li>
-                    </ul>
-                </div>
+                <h3>SQL</h3>
+                <ul>
+                    <li><a href="#">project1 name</a></li>
+                    <li><a href="#">project2 name</a></li>
+                </ul>
+            </div>
+            <div class="python">
+                <h3>python3</h3>
+                <ul>
+                    <li><a href="#">project1 name</a></li>
+                    <li><a href="#">project1 name</a></li>
+                </ul>
+            </div>
+            <div class="HTML5">
+                <h3>HTML5</h3>
+                <ul>
+                    <li><a href="#">project1 name</a></li>
+                    <li><a href="#">project1 name</a></li>
+                </ul>
+            </div>
+            <div class="Machine learning">
+                <h3>Machine learning</h3>
+                <ul>
+                    <li><a href="#">project1 name</a></li>
+                    <li><a href="#">project1 name</a></li>
+                </ul>
+            </div>
+            <div class="Tableau">
+                <h3>Tableau</h3>
+                <ul>
+                    <li><a href="#">project1 name</a></li>
+                    <li><a href="#">project1 name</a></li>
+                </ul>
+            </div>
+            <div class="Java">
+                <h3>Java</h3>
+                <ul>
+                    <li><a href="#">project1 name</a></li>
+                    <li><a href="#">project1 name</a></li>
+                </ul>
+            </div>
+            <div class="Data Science">
+                <h3>Data Science</h3>
+                <ul>
+                    <li><a href="#">project1 name</a></li>
+                    <li><a href="#">project1 name</a></li>
+                </ul>
+            </div>
         </div>
     </section>
     <section id="skills" class="skills">
@@ -124,52 +495,66 @@
             <div class="skill-bars">
                 <div class="skill">
                     <span>SQL</span>
-                    <div class="bar"><div class="progress" style="width: 90%;"></div></div>
+                    <div class="bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
                 </div>
                 <div class="skill">
                     <span>Python</span>
-                    <div class="bar"><div class="progress" style="width: 85%;"></div></div>
+                    <div class="bar">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
                 </div>
                 <div class="skill">
                     <span>HTML5</span>
-                    <div class="bar"><div class="progress" style="width: 90%;"></div></div>
+                    <div class="bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
                 </div>
                 <div class="skill">
                     <span>CSS3</span>
-                    <div class="bar"><div class="progress" style="width: 80%;"></div></div>
+                    <div class="bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
                 </div>
                 <div class="skill">
                     <span>WordPress</span>
-                    <div class="bar"><div class="progress" style="width: 88%;"></div></div>
+                    <div class="bar">
+                        <div class="progress" style="width: 88%;"></div>
+                    </div>
                 </div>
                 <div class="skill">
                     <span>Machine Learning</span>
-                    <div class="bar"><div class="progress" style="width: 92%;"></div></div>
+                    <div class="bar">
+                        <div class="progress" style="width: 92%;"></div>
+                    </div>
                 </div>
                 <div class="skill">
                     <span>Java</span>
-                    <div class="bar"><div class="progress" style="width: 75%;"></div></div>
+                    <div class="bar">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
                 </div>
                 <div class="skill">
                     <span>Data science</span>
-                    <div class="bar"><div class="progress" style="width: 80%;"></div></div>
+                    <div class="bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    <section id="contact">
+        <div class="btn">
+            <a href="https://www.linkedin.com/in/akshay-i-3b8264187/" class="btn">linkedin</a>
+            <a href="mailto:ijalkar3@gmail.com" class="btn">E-mail</a>
+        </div>
+    </section>
+    <section id="certifications">
     <section id="resume" class="resume">
         <div class="reusme-container">
             <a href="pdf/resume.pdf" class="btn">Download CV</a>
         </div>
-    </section>
-    <section id="contact">
-        <div class="btn">
-            <a href="#" class="btn">linkedin</a>
-            <a href="#" class="btn-seconday">E-mail</a>
-        </div>
-    </section>
-    <section id="certifications">
-
     </section>
     <footer>
         <div class="container">
@@ -177,4 +562,5 @@
         </div>
     </footer>
 </body>
+
 </html>
