@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en"> <!--attribute-->
+
+<head> <!--opening head tag-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> <!--meta tags-->
+    <style>
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+
+</head> <!--closing head tag-->
+
+<body> <!--opening tag-->
+    <!--header tag-->
+    <header>
+        Welcome
+    </header>
+    Hello world
+    This is my first website
+    <!--LOREM 34/340 for 34 or 340 lines of dummy text-->
+    <!--anchor tag-->
+    if you want to go to google, <a href="https://www.google.com">click here</a>
+    <!--heading tag-->
+    <h1>This is heading-1 of my HTML website</h1>
+    <h2>This is heading-2</h2>
+    <h3>This is heading-3</h3>
+    <h4>This is heading-4</h4>
+    <h5>This is heading-5</h5>
+    <h5>This is heading-6</h5>
+    <!--paragraph tag-->
+    <p>This is my paragraph</p>
+    <!--image tag-->
+    <h1>Images of flowers</h1>
+    <img src="https://img.freepik.com/premium-photo/beautiful-lotus-flower-with-reflection-water_910684-566.jpg?w=900"
+        alt="lotus image" height="121">
+    <!--bold-italic-underline tags-->
+    <b>Beautiful</b>
+    <i>Beautiful</i>
+    <u>Beautiful</u>
+    <!--break tag-->
+    <br>
+    <!--tab tag-->
+    <t>This is tab</t>
+    <br>
+    <!--Big or small tag-->
+    <big>Hello world</big>
+    <br>
+    <small>Hello world</small>
+    <!--horizontal ruler tag-->
+    <hr>
+    above line is horizontal ruler
+    <!--subscript and superscript-->
+    <br>
+    H<sub>2</sub>O
+    H<sup>2</sup>O
+    <br>
+    <!--pre tag-->
+    <pre>
+I
+am
+akshay     Hello world
+    </pre>
+    <!--non breaking space tag-->
+    hello&nbsp;world
+    <!--main tag-->
+    <main>
+        <!--page section-->
+        <section>
+            <!--self-contained content-->
+            <article>
+                <div>
+                    i am content inside div
+                    <br>
+                    <span>
+                        i am span check and inspect me and div
+                    </span>
+                </div>
+                <!--content goes here-->
+            </article>
+        </section>
+        <!--content aside from main content-->
+        <aside>
+            <!--Aside content goes here-->
+        </aside>
+    </main>
+
+    <!--navigation tag-->
+    <nav>
+        <a href="https://www.google.com">google</a>
+        <!--_blank for opening in new tab-->
+        <a href="https://www.youtube.com" target="_blank">youtube</a>
+        <a href="pages/about.html">about</a>
+    </nav>
+    <!--footer tag-->
+    <footer>
+        This is footer
+    </footer>
+
+    <!-- list -->
+    <!-- ordered list -->
+    <ol>
+        <li>milk</li>
+        <li>banana</li>
+        <li>chocolate</li>
+    </ol>
+    <!-- unordered list -->
+    <ul>
+        <li>vehicle</li>
+        <li>toys</li>
+        <li>games</li>
+    </ul>
+    <!-- definition list -->
+    <dl><!--definition list-->
+        <dt><!--definition term-->Java</dt>
+        <dd><!--definition data--> Java is a programming language</dd>
+        <dt>python</dt>
+        <dd>Python is also a programming language</dd>
+    </dl>
+    <!-- tables -->
+    <h1>Tables in HTML</h1>
+    <table>
+        <thead>
+            <tr><!--Table row-->
+                <th>name</th><!--Table head-->
+                <th>role</th>
+                <th>salary</th>
+            </tr>
+            <tr>
+                <td>Harry</td><!--table data-->
+                <td>Software developer</td>
+                <td>$200000</td>
+            </tr>
+            <tr>
+                <td>Payal</td>
+                <td>Programmer</td>
+                <td>$20000</td>
+            </tr>
+            <tr>
+                <td>akshay</td>
+                <td>Data Scientist</td>
+                <td>$150000</td>
+            </tr>
+            <tr>
+                <td>Thank</td>
+                <td colspan="2">you</td><!--column span help to span column-->
+            </tr>
+        </thead>
+    </table>
+    <!-- forms -->
+    <form action="/submit.php">
+        <!-- name input -->
+        <div>
+            <label for="name">Name</label>
+            <input type="text" placeholder="Enter Name">
+        </div>
+        <!-- phone input -->
+        <div>
+            <label for="phone">Phone</label>
+            <input id="phone" type="tel" placeholder="enter number" required>
+        </div>
+        <!-- email input -->
+        <div>
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="enter email-id" required>
+        </div>
+        <!-- password input -->
+        <div>
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="Enter Password" required>
+        </div>
+        <!-- date input -->
+        <div>
+            <label for="dob">Date of Birth</label>
+            <input id="dob" type="date" required>
+        </div>
+        <!-- dropdown and select input -->
+        <div>
+            <label for="gender">Gender</label>
+            <select id="gender" required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="Male">male</option>
+                <option value="Female">female</option>
+                <option value="other">other</option>
+            </select>
+        </div>
+        <!-- radio buttons for subscription plan -->
+        <p>Subscription plan</p>
+        <input id="basic" type="radio" name="subscription" value="basic">
+        <label for="basic">Basic</label>
+        <input id="Premium" type="radio" name="subscription" value="Premium">
+        <label for="Premium">Premium</label>
+        <input id="VIP" type="radio" name="subscription" value="VIP">
+        <label for="VIP">VIP</label>
+        </div>
+        <!-- checkbox for agreement and condition -->
+        <div>
+            <input id="terms" type="checkbox" required>
+            <label for="terms">I agree terms and conditions for the login</label>
+        </div>
+        <!-- text area for comment -->
+        <div>
+            <label for="comment">comments</label>
+            <textarea id="comment" placeholder="Enter you comments" rows="4"></textarea>
+        </div>
+        <!-- submit button -->
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    <!-- video on html -->
+    <video src="video.mp4" type="video/mp4" controls autoplay muted controls loop>
+        Your bowser does not support html video tags
+    </video>
+    <!-- embedding youtube video -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/5o5Xx9pFsL4?si=TL_-7FEhDI16L8oH"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+    </iframe>
+
+
+
+
+</body>
+
+</html> <!--closing tag-->
