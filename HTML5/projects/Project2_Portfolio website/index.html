@@ -74,28 +74,36 @@
         header nav ul li a.active {
             color: #ffffff;
         }
+        /* profile section */
+        .profile {
+            text-indent: 5%;
+            /* text-align: left;     */
+            background: #e2b146;
+        }
 
+        /* headline section */
+        .headline{
+            text-indent: 5%;
+            /* text-align: left; */
+            background: #e2b146;
+        }
         /* Hero Section */
         .hero {
             text-align: center;
             padding: 4rem 0;
-            background: linear-gradient(135deg, #f0a500, hsl(60, 8%, 97%));
+            background: linear-gradient(180deg, #e2b146, hsl(60, 8%, 150%));
             color: #111111;
-        }
-
-        .hero img {
-            border-radius: 50%;
-            margin-bottom: 1.5rem;
         }
 
         .hero h2 {
             font-size: 2rem;
             margin-bottom: 0.5rem;
+            text-align:left;
         }
 
         .hero .highlight {
             color: #0f0f0f;
-            background: #f0a500;
+            background: #e2b146;
             padding: 0.2rem 0.5rem;
             border-radius: 5px;
         }
@@ -124,15 +132,9 @@
             padding: 4rem 0;
             display: flex;
             flex-wrap: wrap;
-            align-items: center;
+            /* align-items: center; */
             gap: 2rem;
-            background: linear-gradient(135deg, #f0a500, hsl(60, 8%, 97%));
-        }
-
-        .about img {
-            width: 200px;
-            border-radius: 10px;
-            flex: 1 1 30%;
+            background: linear-gradient(1deg,#f0a500, hsl(60, 8%, 150%));
         }
 
         .about-text {
@@ -161,12 +163,13 @@
             flex-wrap: wrap;
             gap: 20px;
             justify-content: space-between;
-            background: linear-gradient(135deg, #f0a500, hsl(60, 8%, 97%));
+            background: linear-gradient(180deg, #f0a500, hsl(60, 8%, 97%));
             padding: 4rem 2rem;
-            /* border-radius: 10px; */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
+        .projects h1{
+            text-indent: 30%;
+        }
         .projects div {
             flex: 0 0 48%;
             padding: 1.5rem;
@@ -175,12 +178,12 @@
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
             overflow: hidden;
             position: relative;
-            transform: translateY(0);
+            /* transform: translateY(0); */
             transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
 
         .projects div:hover {
-            transform: translateY(-10px);
+            /* transform: translateY(-10px); */
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
 
@@ -267,7 +270,7 @@
         /* Skills Section */
         .skills {
             padding: 4rem 0;
-            text-align: center;
+            /* text-align: left; */
             background: #4f4d49;
             color:#fefdfd
         }
@@ -300,7 +303,7 @@
         }
 
         .progress {
-            background: #b1e176;
+            background: #49da50;
             height: 100%;
             width: 0;
             transition: width 0.5s ease;
@@ -310,6 +313,28 @@
             width: var(--progress);
         }
 
+        /* Contact Section */
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 1rem;
+        }
+
+        .contact-icon img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s ease;
+            background-color: #ffffff;
+            border-radius: 50%;
+        }
+
+        .contact-icon img:hover {
+            transform: scale(1.1);
+        }
+        .contact h3{
+            text-align:center;
+        }
         /* Resume Section */
         .resume {
             padding: 2rem 0;
@@ -329,32 +354,6 @@
             background: #555;
         }
 
-        /* Contact Section */
-        #contact {
-            padding: 4rem 0;
-            background: #f4f4f4;
-            text-align: center;
-            background: #4f4d49;
-        }
-
-        #contact .btn {
-            display: inline-block;
-            margin: 0.5rem;
-            padding: 0.75rem 2rem;
-            background: #f0a500;
-            color: #333;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-        }
-
-        #contact .btn-secondary {
-            background: #333;
-            color: #fff;
-        }
-
-        #contact .btn:hover {
-            background: #e69500;
-        }
 
         /* Footer */
         footer {
@@ -400,13 +399,16 @@
             </nav>
         </div>
     </header>
-
+    <div class="profile">
+        <p><img src="img/profile.png" width="300"></p>
+    </div>
+    <div class="headline">
+        <h2>Hello!</h2>
+        <h2>I'm <span class="highlight">akshay ravaji ijalkar</span></h2>
+        <br>
+    </div>
     <section id="home" class="hero">
         <div class="container">
-            <img src="img/main.jpg" width="123">
-            <h2>Hello!</h2>
-            <h2>I'm <span class="highlight">akshay ravaji ijalkar</span></h2>
-            <br>
             <p class="subtitle"><b>Data scientist</b></p>
             <div class="cta-buttons">
                 <a href="#contact" class="btn">Hire Me</a>
@@ -418,12 +420,11 @@
     <section id="about" class="about">
         <div class="container">
             <div class="about-content">
-                <img src="img/profile.png">
                 <div class="about-text">
                     <h2>About Me</h2>
                     <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
                     <ul>
-                        <li><strong>Name:</strong> akshay ijalkar</li>
+                        <li><strong>Name:</strong> akshay ravaji ijalkar</li>
                         <li><strong>Date of Birth:</strong> September 05, 1999</li>
                         <li><strong>Address:</strong> Nanded Maharashtra, INDIA</li>
                         <li><strong>Zip code:</strong> 431605</li>
@@ -434,9 +435,10 @@
             </div>
         </div>
     </section>
+    
     <section id="projects" class="projects">
+        <h1>Projects</h1>
         <div class="container">
-            <h2>Projects</h2>
             <div class="SQL">
                 <h3>SQL</h3>
                 <ul>
@@ -543,19 +545,29 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section id="contact">
-        <div class="btn">
-            <a href="https://www.linkedin.com/in/akshay-i-3b8264187/" class="btn">linkedin</a>
-            <a href="mailto:ijalkar3@gmail.com" class="btn">E-mail</a>
-        </div>
-    </section>
-    <section id="certifications">
-    <section id="resume" class="resume">
-        <div class="reusme-container">
-            <a href="pdf/resume.pdf" class="btn">Download CV</a>
-        </div>
-    </section>
+        <section id="contact" class="contact">
+            <h3>Contact Me</h3>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/akshay-i-3b8264187/" 
+                    class="contact-icon linkedin" target="_blank" title="LinkedIn">
+                    <img src="img/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://outlook.office.com/mail/deeplink/compose?to=ijalkar3@gmail.com&subject=Hello&body=This%20is%20a%20test%20email"
+                    class="contact-icon email" target="_blank" title="Email">
+                    <img src="img/email.png" alt="Email">
+                </a>
+                <a href="https://www.instagram.com/_akshay_ijalkar_/"
+                    class="contact-icon instagram" target="blank" title="Instagram">
+                    <img src="img/instagram.png" alt="Instagram">
+                </a>
+            </div>
+        </section>
+        <section id="resume" class="resume">
+            <a href="pdf/resume.pdf" class="btn">Download cv</a>
+        </section>
+        <section id="certificate" class="certificate">
+            <a href="pdf/resume.pdf" class="btn"></a>
+        </section>
     <footer>
         <div class="container">
             <p>Copyright &copy; 2024 All rights reserved</p>
