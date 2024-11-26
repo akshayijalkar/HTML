@@ -1,6 +1,7 @@
 #exact rupees needed to make payment
+rupees_to_make = input("enter:")
 #create function
-def make_amount(rupees_to_make,no_of_five,no_of_one):
+def make_amount(no_of_five,no_of_one):
     #necessary variables
     five_needed=0
     one_needed=0
@@ -37,4 +38,3 @@ def make_amount(rupees_to_make,no_of_five,no_of_one):
 
 #call function with values
 #Provide different values for rupees_to_make,no_of_five,no_of_one and test your program
-make_amount(28,8,5)
