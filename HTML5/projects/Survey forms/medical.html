@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical Survey Form</title>
+  <link rel="stylesheet" href="medical.css">
+</head>
+<body>
+  <div class="form-container">
+    <h1 class="form-title">Medical Survey Form</h1>
+    <p>Please complete this form to provide information about your medical condition.</p>
+    <form class="medical-form">
+      <!-- Personal Information -->
+      <fieldset>
+        <legend>Personal Information</legend>
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" id="age" placeholder="Enter your age" required>
+        </div>
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <select id="gender" required>
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="contact">Contact Number</label>
+          <input type="tel" id="contact" placeholder="Enter your contact number" required>
+        </div>
+      </fieldset>
+
+      <!-- Health History -->
+      <fieldset>
+        <legend>Health History</legend>
+        <div class="form-group">
+          <label for="conditions">Do you have any existing medical conditions?</label>
+          <textarea id="conditions" rows="4" placeholder="List any medical conditions" required></textarea>
+        </div>
+        <div class="form-group">
+          <label>Have you ever had surgery?</label>
+          <div class="form-options">
+            <label><input type="radio" name="surgery" value="yes"> Yes</label>
+            <label><input type="radio" name="surgery" value="no"> No</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="allergies">Do you have any allergies? If yes, specify:</label>
+          <textarea id="allergies" rows="3" placeholder="List any allergies"></textarea>
+        </div>
+      </fieldset>
+
+      <!-- Current Symptoms -->
+      <fieldset>
+        <legend>Current Symptoms</legend>
+        <div class="form-group">
+          <label for="symptoms">Select your current symptoms:</label>
+          <div class="form-options">
+            <label><input type="checkbox" name="symptoms" value="fever"> Fever</label>
+            <label><input type="checkbox" name="symptoms" value="cough"> Cough</label>
+            <label><input type="checkbox" name="symptoms" value="fatigue"> Fatigue</label>
+            <label><input type="checkbox" name="symptoms" value="headache"> Headache</label>
+            <label><input type="checkbox" name="symptoms" value="nausea"> Nausea</label>
+            <label><input type="checkbox" name="symptoms" value="shortness_of_breath"> Shortness of Breath</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="onset">When did the symptoms start?</label>
+          <input type="date" id="onset" required>
+        </div>
+      </fieldset>
+
+      <!-- Lifestyle Information -->
+      <fieldset>
+        <legend>Lifestyle Information</legend>
+        <div class="form-group">
+          <label for="smoking">Do you smoke?</label>
+          <select id="smoking" required>
+            <option value="">Select</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            <option value="occasionally">Occasionally</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="exercise">How often do you exercise?</label>
+          <select id="exercise" required>
+            <option value="">Select</option>
+            <option value="daily">Daily</option>
+            <option value="few_times_a_week">A Few Times a Week</option>
+            <option value="rarely">Rarely</option>
+            <option value="never">Never</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <!-- Submit Button -->
+      <button type="submit" class="submit-button">Submit</button>
+    </form>
+  </div>
+</body>
+</html>

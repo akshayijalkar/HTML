@@ -1,0 +1,104 @@
+/* styles.css */
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #86e3ce, #d0e6a5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+  }
+  
+  .form-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .form-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  fieldset {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: #f9f9f9;
+  }
+  
+  legend {
+    font-size: 16px;
+    font-weight: bold;
+    color: #444;
+    padding: 0 10px;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 0.5rem;
+  }
+  
+  input, select, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  input:focus, select:focus, textarea:focus {
+    border-color: #66b3ff;
+    outline: none;
+  }
+  
+  .form-options label {
+    font-size: 14px;
+    margin-right: 1rem;
+    color: #555;
+  }
+  
+  .submit-button {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #45a049;
+  }
+  
