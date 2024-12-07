@@ -1,0 +1,29 @@
+questions should ask:
+
+1. what is the business objective and end goal? How will your organization/company benefit from the model?
+2. How does the current solution look like?
+
+
+
+Finding the Type of model to Build....\
+
+1. Supervised, Un-Supervised or Reinforcement Learning
+2. Classification task or Regression task?
+3. Batch Learning or online learning techniques
+
+
+
+Selection a performance measure
+
+1. A typical performance measure for regression problems is thee Root Mean Square Error      	(RMSE)
+2. RMSE is generally the preferred performance measure for regression task
+3. Other Performance measures include Mean Absolute Error. Manhattan norm etc
+
+
+
+Assumptions....../
+
+1. It is very important to check for any assumptions he might have made and correct them 	before launching the ml system
+2. make sure that the team needs the price and not the categories like expensive, cheap, 	etc
+3. If latter is the case, formulating the problem as a regression task will counted as 	big mistake
+4. make sure customer aware of assumptions
